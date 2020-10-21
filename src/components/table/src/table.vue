@@ -15,7 +15,7 @@
       <div class="at-table__header" v-if="height">
         <table>
           <colgroup>
-            <col v-for="(column, index) in columnsData" :width="setCellWidth(column, index)">
+            <col v-for="(column, index) in columnsData" :width="setCellWidth(column, index)" :key="index">
           </colgroup>
           <thead class="at-table__thead" ref="header">
             <tr>
@@ -28,6 +28,7 @@
               <th
                 v-for="(column, index) in columnsData"
                 class="at-table__cell at-table__column"
+                :key="index"
                 :class="column.className"
                 :style="{
                   cursor: column.sortType ? 'pointer' : 'text'
@@ -56,7 +57,7 @@
       <div class="at-table__body" :style="bodyStyle">
         <table>
           <colgroup>
-            <col v-for="(column, index) in columnsData" :width="setCellWidth(column, index)">
+            <col v-for="(column, index) in columnsData" :width="setCellWidth(column, index)" :key="index">
           </colgroup>
           <thead class="at-table__thead" v-if="!height" ref="header">
             <tr>
@@ -69,6 +70,7 @@
               <th
                 v-for="(column, index) in columnsData"
                 class="at-table__cell at-table__column"
+                :key="index"
                 :class="column.className"
                 :style="{
                   cursor: column.sortType ? 'pointer' : 'text'
@@ -92,11 +94,11 @@
 
           <tbody class="at-table__tbody" v-if="sortData.length" ref="body">
             <template v-for="(item, index) in sortData">
-              <tr>
+              <tr :key="index">
                 <td v-if="optional" class="at-table__cell at-table__column-selection">
                   <at-checkbox v-model="objData[index].isChecked" @on-change="changeRowSelection"></at-checkbox>
                 </td>
-                <td v-for="(column, cindex) in columns" class="at-table__cell">
+                <td v-for="(column, index) in columns" class="at-table__cell" :key="index">
                   <template v-if="column.render">
                     <Cell :item="item" :column="column" :index="index" :render="column.render"></Cell>
                   </template>
@@ -445,7 +447,7 @@ export default {
       this.$nextTick(() => {
         const columnsWidth = {}
 
-        if (this.data.length) {
+        if (this.data.length && this.$refs.body) {
           const $td = this.$refs.body.querySelectorAll('tr')[0].querySelectorAll('td')
 
           for (let i = 0; i < $td.length; i++) {
