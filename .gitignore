@@ -6,3 +6,5 @@ test/e2e/reports
 .vscode
 dist/
 test
+.history
+.idea
