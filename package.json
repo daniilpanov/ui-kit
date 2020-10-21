@@ -1,5 +1,5 @@
 {
-  "name": "at-ui",
+  "name": "@amazingcat/at-ui",
   "version": "1.3.3",
   "description": "A UI Component Library with Vue.js",
   "homepage": "https://at.aotu.io",
@@ -18,10 +18,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:at-ui/at-ui.git"
+    "url": "git@git.amazingcat.net:AmazingTime/core/ui-kit.git"
   },
   "bugs": {
-    "url": "https://github.com/at-ui/at-ui/issues"
+    "url": "https://git.amazingcat.net/AmazingTime/core/ui-kit/-/issues"
   },
   "keywords": [
     "at",
