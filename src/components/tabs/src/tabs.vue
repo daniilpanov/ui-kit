@@ -287,6 +287,10 @@ export default {
       })
     },
     updateHandle () {
+      if(!this.$refs.nav || !this.$refs.navScroll) {
+        return;
+      }
+      
       const navWidth = this.$refs.nav.offsetWidth
       const containerWidth = this.$refs.navScroll.offsetWidth
       const currentOffset = this.getCurrentScrollOffset()
@@ -300,6 +304,7 @@ export default {
       } else {
         this.nextable = false
         this.prevable = false
+        
         if (currentOffset > 0) {
           this.setOffset(0)
         }
