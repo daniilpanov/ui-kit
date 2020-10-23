@@ -1,6 +1,5 @@
 
-# Contributing to AT-UI
-
+# Contributing to AT-UI-Style
 
 Thank you for choosing AT-UI. Please take a few moments to review the following guidelines to get you started.
 
@@ -29,36 +28,6 @@ All pull requests are welcome. Thanks for taking the time to contribute.
 - Fork the repo to your own account.
 - Clone your fork.
 - Create a new branch base on `dev`, if you want to add new component, the branch name should be formatted as `component-[Component Name]`. (e.g. `component-steps`) And the commit info should be formatted as `[Component Name]: Info about commit`.
-- Make sure that running `npm run prepublish` outputs the correct files.
+- Make sure that running `npm run build` outputs the correct files.
 - Rebase before creating a PR to keep commit history clear. (Merge request to branch `dev`)
 - Provide some description about your PR.
-
-## Develop
-
-Clone and install the respoitory.
-
-```bash
-git clone git@github.com:AT-UI/at-ui.git
-
-npm install
-```
-
-Run the project.
-
-```bash
-npm run dev
-
-# open http://localhost:7200/
-```
-
-If you add new language config, please run the command `npm run build:locale` first.
-
-```bash
-npm run build:locale
-```
-
-To build components
-
-```bash
-npm run build:component
-```
