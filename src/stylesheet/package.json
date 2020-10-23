@@ -15,10 +15,6 @@
     "prepublish": "npm run build",
     "start": "npm run build-scss -- --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:o2team/at-ui-style.git"
-  },
   "keywords": [
     "at",
     "at-ui",

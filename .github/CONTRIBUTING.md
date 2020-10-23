@@ -43,15 +43,6 @@ git clone git@github.com:AT-UI/at-ui.git
 npm install
 ```
 
-Update submodule.
-
-> `at-ui-style` is a submodule of `at-ui`. You should run two commands: `git submodule init` to initialize your local configuration file, and `git submodule update` to fetch all the data.
-
-```bash
-git submodule init
-git submodule update
-```
-
 Run the project.
 
 ```bash

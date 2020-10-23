@@ -10,12 +10,6 @@
 
 `AT-UI Style` is an ui component library based on `Flexbox`, be used for [AT-UI](https://at.aotu.io/)
 
-## Install
-
-```bash
-npm install at-ui-style
-```
-
 ## Usage
 
 ```js
@@ -29,7 +23,3 @@ Finding bugs, sending pull requests or improving our docs - any contribution is 
 ## License
 
 MIT
-
-
-[npm-version-image]: https://img.shields.io/npm/v/at-ui-style.svg?style=flat-square
-[npm-version-url]: https://www.npmjs.com/package/at-ui-style

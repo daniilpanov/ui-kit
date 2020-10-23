@@ -8,8 +8,6 @@ Recommended use `npm` to development, enjoy the ecosystem of `node` and the chai
 
 ```bash
 npm install at-ui
-
-npm install at-ui-style
 ```
 
 ## CDN
