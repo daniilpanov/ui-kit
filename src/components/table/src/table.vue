@@ -94,7 +94,7 @@
 
           <tbody class="at-table__tbody" v-if="sortData.length" ref="body">
             <template v-for="(item, index) in sortData">
-              <tr :key="index">
+              <tr :key="index" @click="$emit('rowClick', $event)">
                 <td v-if="optional" class="at-table__cell at-table__column-selection">
                   <at-checkbox v-model="objData[index].isChecked" @on-change="changeRowSelection"></at-checkbox>
                 </td>
