@@ -13,6 +13,8 @@ deploy:
   only:
     - tags
   stage: deploy
+  before_script:
+    - yarn
   script:
     - yarn npm publish
 
