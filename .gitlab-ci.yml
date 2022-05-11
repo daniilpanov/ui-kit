@@ -14,7 +14,6 @@ deploy:
     - tags
   stage: deploy
   script:
-    - echo "npmAuthToken: \"${CI_JOB_TOKEN}\"" >> .yarnrc.yml
     - yarn npm publish
 
 include:
