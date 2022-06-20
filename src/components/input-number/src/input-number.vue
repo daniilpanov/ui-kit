@@ -84,7 +84,7 @@ export default {
     }
   },
   watch: {
-    currentValue (value) {
+    value (value) {
       value = Number(value)
       if (!this.upDisabled && !this.downDisabled) {
         this.$emit('change', value)
